@@ -6,5 +6,6 @@ export type Customer = {
   id: string;
   lastName: string | null;
   orders?: Array<Order>;
+  phone: string | null;
   updatedAt: Date;
 };
