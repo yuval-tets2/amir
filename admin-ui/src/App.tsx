@@ -17,6 +17,14 @@ import { OrderList } from "./order/OrderList";
 import { OrderCreate } from "./order/OrderCreate";
 import { OrderEdit } from "./order/OrderEdit";
 import { OrderShow } from "./order/OrderShow";
+import { DasdList } from "./dasd/DasdList";
+import { DasdCreate } from "./dasd/DasdCreate";
+import { DasdEdit } from "./dasd/DasdEdit";
+import { DasdShow } from "./dasd/DasdShow";
+import { FdsfList } from "./fdsf/FdsfList";
+import { FdsfCreate } from "./fdsf/FdsfCreate";
+import { FdsfEdit } from "./fdsf/FdsfEdit";
+import { FdsfShow } from "./fdsf/FdsfShow";
 import { jwtAuthProvider } from "./auth-provider/ra-auth-jwt";
 
 const App = (): React.ReactElement => {
@@ -63,6 +71,20 @@ const App = (): React.ReactElement => {
           edit={OrderEdit}
           create={OrderCreate}
           show={OrderShow}
+        />
+        <Resource
+          name="Dasd"
+          list={DasdList}
+          edit={DasdEdit}
+          create={DasdCreate}
+          show={DasdShow}
+        />
+        <Resource
+          name="Fdsf"
+          list={FdsfList}
+          edit={FdsfEdit}
+          create={FdsfCreate}
+          show={FdsfShow}
         />
       </Admin>
     </div>
