@@ -25,6 +25,7 @@ export const CustomerCreate = (props: CreateProps): React.ReactElement => {
         >
           <SelectArrayInput optionText={OrderTitle} />
         </ReferenceArrayInput>
+        <TextInput label="phone" source="phone" />
       </SimpleForm>
     </Create>
   );
