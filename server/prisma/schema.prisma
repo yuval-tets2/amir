@@ -1,6 +1,6 @@
 datasource postgres {
   provider = "postgresql"
-  url      = env("POSTGRESQL_URL")
+  url      = env("DB_URL")
 }
 
 generator client {
@@ -13,7 +13,7 @@ model User {
   id        String   @id @default(cuid())
   lastName  String?
   password  String
-  roles     String[]
+  roles     Json
   updatedAt DateTime @updatedAt
   username  String   @unique
 }
@@ -24,6 +24,7 @@ model Customer {
   id        String   @id @default(cuid())
   lastName  String?
   orders    Order[]
+  phone     String?
   updatedAt DateTime @updatedAt
 }
 
@@ -34,4 +35,16 @@ model Order {
   date       DateTime?
   id         String    @id @default(cuid())
   updatedAt  DateTime  @updatedAt
+}
+
+model Dasd {
+  createdAt DateTime @default(now())
+  id        String   @id @default(cuid())
+  updatedAt DateTime @updatedAt
+}
+
+model Fdsf {
+  createdAt DateTime @default(now())
+  id        String   @id @default(cuid())
+  updatedAt DateTime @updatedAt
 }
